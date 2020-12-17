@@ -1,0 +1,147 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap');
+.App {
+  display: flex;
+  flex-direction: column;
+  padding: 38px;
+}
+
+.Column_title {
+  padding-bottom: 20px;
+  font-weight: 600;
+}
+
+.Column_row--header {
+  font-weight: 600;
+}
+
+.Column_row {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #B9B9B9;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.Column_row--selected {
+  background: #EBEBEB;
+  position: relative;
+}
+
+.Column_row--selected::after {
+  content: '';
+  position: absolute;
+  left: 100%;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 23px 0 23px 16px;
+  border-color: transparent transparent transparent #ebebeb;
+}
+
+
+.Column_titleCell {
+  width: 300px;
+}
+
+.RiskLevel {
+  width: 100px;
+}
+
+.RiskLevel span {
+  background: #777777;
+  color: white;
+  font-weight: 600;
+  font-size: 12px;
+  padding: 6px;
+  border-radius: 4px;
+}
+
+.RiskLevel--CRITICAL span {
+  background: #333333;
+}
+
+.RiskLevel--HIGH span {
+  background: #555555;
+}
+
+.RiskLevel--MEDIUM span {
+  background: #777777;
+}
+
+.RiskLevel--LOW span {
+  background: #999999;
+}
+
+.RiskLevel--UNKNOWN span {
+  background: #999999;
+}
+
+.Columns {
+  display: flex;
+}
+
+.Column {
+  margin-right: 80px;
+  font-family: Inter, sans;
+  font-weight: 500;
+  font-size: 16px;
+  color: #333333;
+}
+
+.Column input {
+  height: 24px;
+  width: 24px;
+  margin-right: 18px;
+}
+
+.Header {
+  display: flex;
+  justify-content: end;
+}
+
+.Header_button {
+  text-decoration: none;
+  color: white;
+  font-family: Inter, sans;
+  font-size: 16px;
+  font-weight: 600;
+  background: #777777;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.Dropdown {
+  display: flex;
+  position: relative;
+}
+
+.Dropdown_content {
+  position: absolute;
+  display: none;
+  top: 100%;
+  padding-top: 10px;
+}
+
+.Dropdown_content--opened {
+  display: block;
+}
+
+.Dropdown_content-border {
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  width: fit-content;
+  background: white;
+  padding-top: 4px;
+}
+
+.Dropdown_item {
+  display: flex;
+  padding-top: 4px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #dddddd;
+}
+
+.Dropdown_item .RiskLevel {
+  margin-left: 12px;
+}
